@@ -21,7 +21,7 @@ const args = process.argv;
 			`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`
 		);
 		console.log(
-			chalk.white.bgGreen.bold(
+			chalk.green.bgBlack.bold(
 				`\n${
 					word.charAt(0).toUpperCase() +
 					word.substring(1, word.length)
@@ -39,7 +39,7 @@ const args = process.argv;
 	} catch (err) {
 		if (err.response.status === 404) {
 			console.log(
-				chalk.white.bgRed.bold(
+				chalk.red.bgBlack.bold(
 					`${
 						word.charAt(0).toUpperCase() +
 						word.substring(1, word.length)
