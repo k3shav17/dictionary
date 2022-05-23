@@ -1,12 +1,8 @@
 {
-	"name": "chuck-norris",
-	"description": "Gets jokes form the chuck norris api",
-	"version": "0.0.1",
+	"name": "cli-dic",
+	"description": "Gets meanings to the words mentioned, from the Free dictionary API",
+	"version": "0.0.2",
 	"license": "UNLICENSED",
-	"bin": {
-		"chucknorris": "index.js",
-		"dict": "index.js"
-	},
 	"type": "module",
 	"author": {
 		"name": "Keshava",
@@ -14,8 +10,7 @@
 		"url": "https://github.com/k3shav17"
 	},
 	"keywords": [
-		"chucknorris",
-		"Keshava"
+		"dictionary"
 	],
 	"files": [
 		"index.js",
@@ -25,6 +20,7 @@
 		"format": "prettier --write \"./**/*.{js,json}\"",
 		"start": "node index.js"
 	},
+	"bin" : "./index.js",
 	"dependencies": {
 		"axios": "^0.27.2",
 		"chalk": "^4.1.2",
