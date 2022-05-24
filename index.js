@@ -10,6 +10,7 @@
 import chalk from 'chalk';
 import axios from 'axios';
 import util from 'util';
+import { symlinkSync } from 'fs';
 const args = process.argv;
 
 (async () => {
@@ -48,4 +49,19 @@ const args = process.argv;
 			);
 		}
 	}
+	console.log();
+	let synonyms = [];
+	for (let i = 0; i < 3; i++) {
+		try {
+			const word = res.data[0].meanings[0].synonyms[i];
+			if (word !== undefined) synonyms.push(word);
+		} catch (err) {
+			console.log(err);
+		}
+	}
+	console.log(
+		chalk.white.bgBlack.bold('Synonyms') +
+			': ' +
+			chalk.blue.bgBlack(`${synonyms}`)
+	);
 })();
