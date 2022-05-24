@@ -10,7 +10,6 @@
 import chalk from 'chalk';
 import axios from 'axios';
 import util from 'util';
-import { symlinkSync } from 'fs';
 const args = process.argv;
 
 (async () => {
