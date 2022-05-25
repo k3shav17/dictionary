@@ -1,7 +1,7 @@
 {
 	"name": "cli-dic",
 	"description": "Gets meanings to the words mentioned, from the Free dictionary API",
-	"version": "0.0.2",
+	"version": "1.1.2",
 	"license": "UNLICENSED",
 	"type": "module",
 	"author": {

@@ -10,6 +10,7 @@
 import chalk from 'chalk';
 import axios from 'axios';
 import util from 'util';
+import { exit } from 'process';
 const args = process.argv;
 
 (async () => {
@@ -47,6 +48,7 @@ const args = process.argv;
 				) + ' not found'
 			);
 		}
+		exit(1);
 	}
 	console.log();
 	let synonyms = [];
