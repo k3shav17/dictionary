@@ -32,7 +32,7 @@ const args = process.argv;
 		for (let i = 0; i < 3; i++) {
 			try {
 				const word = res.data[0].meanings[0].definitions[i].definition;
-				console.log(util.format(`* ${word}\n`));
+				console.log(util.format(`\u007E ${word}\n`));
 			} catch (err) {
 				// console.log(`${word} not found!!!`);
 			}
@@ -50,7 +50,6 @@ const args = process.argv;
 		}
 		exit(1);
 	}
-	console.log();
 	let synonyms = [];
 	for (let i = 0; i < 3; i++) {
 		try {
@@ -60,9 +59,11 @@ const args = process.argv;
 			console.log(err);
 		}
 	}
-	console.log(
-		chalk.white.bgBlack.bold('Synonyms') +
-			': ' +
-			chalk.blue.bgBlack(`${synonyms}`)
-	);
+	if (synonyms.length > 0) {
+		console.log(
+			chalk.white.bgBlack.bold('Synonyms') +
+				': ' +
+				chalk.blue.bgBlack(`${synonyms}`)
+		);
+	}
 })();
